@@ -38,7 +38,7 @@ app.locals.title = `${capitalized(projectName)}- Generated with Ironlauncher`;
 const index = require('./routes/index');
 app.use('/', index);
 
-const Movie = require('../models/Movie.model');
+const Movie = require('./models/Movie.model');
 
 app.get('/movies', (req, res, next) => {
   Movie.find()
@@ -51,7 +51,7 @@ app.get('/movies', (req, res, next) => {
     });
 });
 
-const Movie = require('./models/Movie.model');
+
 
 app.get('/movie/:id', (req, res, next) => {
   const { id } = req.params;
