@@ -1,10 +1,10 @@
-<div class="movie-details">
-<h2>Movie: {{movie.title}}</h2>
-
-<p>Description: {{movie.description}}</p>
-
+<div class="p-10 bg-pink-200">
+<h2 class="text-gray-800 text-2xl font-bold">Movie: {{movie.title}}</h2>
 <p>Directed by: {{movie.director}}</p>
-<p>Starring: {{movie.stars}}</p>
-<p>Showtimes: {{movie.showtimes}}</p>
-<img src="{{movie.image}}" alt="{{movie.title}}" />
 </div>
+<div class= "grid gap-2 grid-cols-2 p-10 text-2xl" >
+<p>Description: {{movie.description}}</p>
+<img class= "object-contain" src="{{movie.image}}" alt="{{movie.title}}" />
+<p class="font-bold">Starring: {{movie.stars}}</p>
+</div>
+<p class ="p-10 uppercase text-3xl">Showtimes: {{movie.showtimes}}</p>
