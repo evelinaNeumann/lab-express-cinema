@@ -1,16 +1,18 @@
 <h2 class="text-gray-800 text-4xl font-bold uppercase p-8 flex justify-center bg-pink-200">List of movies</h2>
 <div >
-  <div class = "grid gap-2 grid-cols-3 p-10" >
+  <div class = " grid grid-cols-4 gap-10  p-10 " >
     {{#each movies}}
       <div class="text-gray-600">
         <a href="/movies/{{this._id}}">
-          <img src="{{this.image}}" alt="{{this.title}}" width="282" height="468">
+          <img class ="object-fill" src="{{this.image}}" alt="{{this.title}}" width="282" height="468">
           <h3 class="text-gray-800 text-2xl font-bold"> {{this.title}}</h3>
         </a>
-        <div class="flex flex row flex-grow w-80 ">
-        <a class= "text-xs bg-pink-400 uppercase"href="/movies/{{this._id}}/edit"> Edit Movie</a>
+        <div class="flex row justify-left text-lg  ">
+          <form>
+        <a  class= "text-xs bg-pink-400 uppercase"href="/movies/{{this._id}}/edit"> Edit Movie</a>
+        </form>
         <form   action="/movies/{{this._id}}/delete" method="POST">
-          <input class= " text-xs bg-pink-200 uppercase flex-grow h-19" type="submit" value="Delete Movie" />
+          <input class= " text-xs bg-pink-200 uppercase  ml-40" type="submit" value="Delete Movie" />
         </form>
         </div>
       </div>
