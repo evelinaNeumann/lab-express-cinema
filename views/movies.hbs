@@ -1,12 +1,12 @@
-{{!-- views/movies.hbs --}}
-<h1>Movies</h1>
-
-<div class="movie-container">
+<h2>List of movies</h2>
+<ul>
   {{#each movies}}
-    <div class="movie-card">
-      <img src="{{image}}" alt="{{title}} poster">
-      <h2>{{title}}</h2>
-     <a href="/movie/{{_id}}">See more</a>
-    </div>
+    <li>{{this.title}}
+      <a href="/movies/{{this._id}}">See Details&nbsp;</a>
+      <a href="/movies/{{this._id}}/edit"> Edit Movie</a>
+      <form action="/movies/{{this._id}}/delete" method="POST">
+        <input type="submit" value="Delete Movie" />
+      </form>
+    </li>
   {{/each}}
-</div>
+</ul>

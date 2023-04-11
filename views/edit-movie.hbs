@@ -1,0 +1,32 @@
+<h2>Edit the movie: </h2>
+<form action="/movies/{{movie._id}}/edit" method="POST">
+  <input
+    type="text"
+    placeholder="Title"
+    name="title"
+    id="title"
+    value="{{movie.title}}"
+  />
+  <input
+    type="text"
+    placeholder="Director"
+    name="director"
+    id="director"
+    value="{{movie.director}}"
+  />
+  <input
+    type="text"
+    placeholder="Image"
+    name="image"
+    id="image"
+    value="{{movie.image}}"
+  />
+  <input
+    type="text"
+    placeholder="Description"
+    name="description"
+    id="description"
+    value="{{movie.description}}"
+  />
+  <input type="submit" value="Send movie to database" />
+</form>
