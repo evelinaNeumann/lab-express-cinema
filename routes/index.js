@@ -16,10 +16,10 @@ router.get("/movies", (req, res) => {
 });
 
 // Render the creation form
-router.get("/create-movies", (req, res) => res.render("create-movies"));
+router.get("/movies/create", (req, res) => res.render("create-movies"));
 
 // Create a new movie
-router.post("/create-movie", (req, res) => {
+router.post("/movies/create", (req, res) => {
   const newMovie = req.body;
   newMovie.stars = ["1", "2"];
   newMovie.showtimes = ["1pm", "5pm"];

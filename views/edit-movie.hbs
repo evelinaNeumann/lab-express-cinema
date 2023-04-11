@@ -1,32 +1,35 @@
-<h2>Edit the movie: </h2>
-<form action="/movies/{{movie._id}}/edit" method="POST">
-  <input
+<h2 class="text-gray-800 text-4xl font-bold uppercase p-8 flex justify-center bg-pink-200">Edit the movie: </h2>
+<form  class ="gap-10  p-10  text-xl  uppercase rounded-md ... border-pink-400 "action="/movies/{{movie._id}}/edit" method="POST">
+  <div class ="grid grid-cols-2 gap-10  p-10">
+  <input 
     type="text"
     placeholder="Title"
     name="title"
     id="title"
     value="{{movie.title}}"
   />
-  <input
+  <input 
     type="text"
     placeholder="Director"
     name="director"
     id="director"
     value="{{movie.director}}"
   />
-  <input
+  <input 
     type="text"
     placeholder="Image"
     name="image"
     id="image"
     value="{{movie.image}}"
   />
-  <input
+  <input 
     type="text"
     placeholder="Description"
     name="description"
     id="description"
     value="{{movie.description}}"
   />
-  <input type="submit" value="Send movie to database" />
+  </div>
+  <input class="mx-auto my-5 px-10 py-3 text-xl font-bold uppercase bg-pink-200 rounded-md" type="submit" value="Send movie to database" />
+  <button class="mx-auto my-5 px-10 py-3 text-xl font-bold uppercase bg-pink-200 rounded-md"><a href="/">Go home</a></button>
 </form>
