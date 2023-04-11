@@ -1,12 +1,20 @@
-<h2>List of movies</h2>
-<ul>
-  {{#each movies}}
-    <li>{{this.title}}
-      <a href="/movies/{{this._id}}">See Details&nbsp;</a>
-      <a href="/movies/{{this._id}}/edit"> Edit Movie</a>
-      <form action="/movies/{{this._id}}/delete" method="POST">
-        <input type="submit" value="Delete Movie" />
-      </form>
-    </li>
-  {{/each}}
-</ul>
+<h2 class="text-gray-800 text-2xl font-bold">List of movies</h2>
+<div >
+  <div class = "flex flex-wrap" >
+    {{#each movies}}
+      <div class="text-gray-600">
+        <a href="/movies/{{this._id}}">
+          <img src="{{this.image}}" alt="{{this.title}}" width="182" height="268">
+          <h3 class="text-gray-800 text-lg font-bold"> {{this.title}}</h3>
+        </a>
+        
+        <a class= "bg-pink-400"href="/movies/{{this._id}}/edit"> Edit Movie</a>
+        <form   action="/movies/{{this._id}}/delete" method="POST">
+          <input class= "bg-pink-200" type="submit" value="Delete Movie" />
+        </form>
+        
+      </div>
+     
+    {{/each}}
+  </div>
+</div>
